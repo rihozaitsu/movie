@@ -1,0 +1,103 @@
+@charset "utf-8";
+* {
+  margin:0;
+  padding:0;
+}
+body{
+	width: 100vw;
+	overflow-x: hidden;
+	background-color: #222;
+}
+img{
+	vertical-align: bottom;
+}
+li{
+	list-style: none;
+}
+/*見た目を整えています*/
+.menu{
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	position: fixed;
+	z-index: 30000000;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	padding: 14vh 0 0 0;
+	opacity: 0;
+}
+.menu li{
+	font-size: 4vw;
+	padding: 1.2vh 0 1.2vh 0;
+	margin: 2.4vh 6%;
+}
+.menu li span{
+	margin: auto 15px auto auto;
+	color: #333;
+	font-size:12px;
+}
+.menu a{
+	color: #000;
+	text-decoration: none;
+}
+/* ボタンの見た目 */
+.btn_wrap{
+	mix-blend-mode: exclusion;
+	position: fixed;
+	z-index: 400000000;
+	right: 0;
+	margin:2vh 0 4vh auto;
+	width: 18vw;
+}
+.btn{
+	z-index: 400000000;
+	position: absolute;
+	width: 18vw;
+	height: 18vw;
+}
+.btn2{
+	z-index: 400000000;
+	transform: scale(0.7);
+	position: absolute;
+	width: 18vw;
+	height: 18vw;
+	opacity: 0;
+}
+
+/* ボタン切り替えアニメーション */
+.btnout{
+	animation: btnout 0.5s forwards;
+}
+@keyframes btnout{
+	100%{
+		opacity: 0;
+		transform: scale(0.1);
+	}
+}
+.btnchange{
+	animation: btnchange 0.5s forwards;
+}
+@keyframes btnchange{
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/*メニュー展開時のアニメーション*/
+.over{
+	display: block;
+	animation: overmenu 0.4s forwards;
+}
+@keyframes overmenu{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+
+@media screen and (max-width:900px) {
+}
+@media screen and (min-width:901px) {
+}
+
